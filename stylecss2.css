@@ -1,0 +1,131 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	/*height: cover;*/
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #a0abef;
+}
+.container{
+	width: 100%;
+	height: auto;
+	position: relative;
+	float: center;
+	top: 10px;
+	margin: 10% 35%;
+	background-color: ghostwhite;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 12px;
+	box-shadow: -3px -1px 37px 9px rgba(176,111,173,0.75);
+}
+.container-fluid{
+	width: 100%;
+	height: auto;
+/*		background-color: lightcyan;*/
+
+}
+.input-field{
+	height: 40%;
+	width: 100%;
+	padding: 3px 15px;
+	border: none;
+	transition: all 0.2s ease;
+	margin: 10px 40px;
+	display: inline-flex;
+}
+.input-field input{
+	padding: 5px 30px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	border-bottom: 1.5px solid #ccc;
+	border-top: 2px solid transparent;
+	transition: all 0.2s ease;
+}
+.input-field input:is(:focus, :valid){
+	border-bottom-color: #4070f4;
+}
+.left{
+	float: left;
+	height: 18%;
+	width: 15%;
+}
+.right{
+	float: left;
+	height: 18%;
+	width: 40%;
+}
+.middle{
+	display: inline;
+}
+.middle a{
+	color: blue;
+	font-size: 15px;
+}
+.right1{
+	margin-left: 55%;
+}
+.title{
+	margin-left: 28%;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-size: 28px;
+	color: #000066;
+	font-family: verdana;
+	font-style: bolder;
+	text-decoration: underline;
+	text-shadow: 1px 1px 8px greenyellow;
+}
+.button{
+	margin: 4% 13%;
+	padding: 8px 14px;
+	cursor: pointer;
+	background-color: #b3b3ff;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	width: 70%;
+}
+.login-signup{
+	margin: 3% 20%;
+}
+.text{
+	font-size: 16px;
+	color: black;
+	font-family: sans-serif;
+}
+a{
+	text-decoration: none;
+}
+.signuplink{
+	color: #0000ff;
+}
+.input-field i{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #999;
+	font-size: 20px;
+}
+.input-field i.icon{
+	left: 0;
+}
+.input-field input:is(:focus, :valid) ~ i{
+	color: #4070f4;
+}
+/*.input-field i.showHidePw{
+	right: 0;
+	cursor: pointer;
+	padding: 10px;
+}*/
+.error{
+	color: red;
+	font-weight: 500;
+}

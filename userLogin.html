@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+	<link rel="stylesheet" type="text/css" href="stylecss2.css">
+	<link rel="icon" type="image/png" href="hi.png"/>
+	<title>Login Form</title>
+</head>
+<body>
+	<div class="container">
+		<div class="head">
+			<h1 class="title">Login Form</h1>
+		</div>
+		<div class="container-fluid">
+			<form action="two.php" method="POST">
+				<div class="input-field">
+					<div class="left">
+						<i class="uil uil-mobile-android"></i>
+						<!-- <label for="fn">Mobile No : </label> -->
+					</div>
+					<div class="right">
+						<input type="text" name="phno" id="phno" placeholder="Mobile Number" maxlength="15">
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="left">
+						<i class="uil uil-lock icon"></i>
+						<!-- <label for="fn">Password : </label> -->
+					</div>
+					<div class="right">
+						<input type="password" name="pass" id="pswd" class="password" name="pwd" placeholder="Password">
+						<!-- <i id="pasIcon" class="uil uil-eye-slash showHidePw"></i> -->
+					</div>
+				</div>
+				<div class="middle">
+					<div class="right1">
+						<a href="#" class="text">Forgot Password?</a>
+					</div>
+				</div>
+				<div>
+					<input type="submit" class="button" id="loginBtn" name="submit" value="Login Now">
+				</div>
+			</form>
+		</div>
+		<div class="login-signup">
+			<span class="text">Not a Member?</span>	
+			<a href="userReg.html" class="text signuplink">SignUp Now</a>
+		</div>
+	</div>
+</body>
+<script src="script.js">
+	
+</script>
+<script src="script1.js">
+	
+</script>
+</html>
+<!-- <div class="container active">
+		<div class="forms">
+			<div class="form login">
+				<span class="title">Login Form</span>
+					<form method="post" target="_self" name="form" action="#">
+						<div class="input-field">
+							<input type="text" name="fn" placeholder="Enter your email" id="username" maxlength="15">
+							<i class="uil uil-envelope icon"></i>
+						</div>
+						<p class="error dn" id="unerr"></p>
+						<div class="input-field">
+							<input type="password" class="password" name="pwd" placeholder="Enter your password" id="password" maxlength="15">
+							<i class="uil uil-lock icon"></i>
+							<i class="uil uil-eye-slash showHidePw"></i>
+						</div>
+						<p class="error dn" id="pserr"></p>
+						<div  class="checkbox-text">
+							<div class="checkbox-content">
+								<input type="checkbox" id="logCheck">
+								<label for="logCheck" class="text">Remember Me</label>
+							</div>
+							<a href="#" class="text">Forgot Password?</a>
+						</div>
+						<div class="input-field button">
+							<input type="submit" value="Login Now" id="loginBtn">
+						</div>
+					</form>
+					<div  class="login-signup">
+						<span class="text">Not a Memeber?</span>	
+						<a href="register.html" class="text signuplink">SignUp Now</a>
+					</div>
+			</div>
+		</div>		
+	</div> -->

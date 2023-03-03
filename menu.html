@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+	<title>COFFEE HOUSE</title>
+	<link rel="icon" type="image/png" href="coffeeicon.jpg">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
+    jQuery('.quantity').each(function() {
+      var spinner = jQuery(this),
+        input = spinner.find('input[type="number"]'),
+        btnUp = spinner.find('.quantity-up'),
+        btnDown = spinner.find('.quantity-down'),
+        min = input.attr('min'),
+        max = input.attr('max');
+      btnUp.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue >= max) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue + 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+      btnDown.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue <= min) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue - 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+    });
+});
+		    
+	</script>
+<style type="text/css">
+
+	body{
+		box-sizing: border-box;
+		text-align: center;
+	  background-image: url('https://img.freepik.com/premium-vector/engraved-coffee-shop-related-objects-background-kraft-paper-texture_281653-1168.jpg?w=740');
+	  background-size: 100%;
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: 100%;
+	  background-position: fixed;
+	}
+	.container{
+		height: 20px;
+	}
+	.child{
+		display: inline-block;
+		border: transparent;
+		padding: 1rem 1rem;
+		vertical-align: middle;
+		margin-top: 0px;
+	}
+	#case{
+		border: 2px solid black;
+		margin: 10px 10px;
+		padding: 10px;
+	}
+	label{
+		margin: 5px 10px;
+		padding: 3px;
+		font-weight: bold;
+	}
+	input{
+		margin: 5px 10px;
+		padding: 5px;
+	}
+	p{
+		margin-right: 150px;
+		font-family: sans-serif;
+		font-weight: bold;
+		font-size: 20px;
+		margin-top: 5px;
+		margin-bottom: 0px;
+		text-align: left;
+	}
+	iframe{
+		position:absolute;
+		z-index:1;
+		top:0px;
+		left:0px;
+		border: 0 !important;
+	}
+	#box{
+		margin: 10px;
+	}
+	img{
+		display: inline;
+	}
+	.image1{
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-position: left;
+	}
+	.head{
+		display: inline-block;
+		padding: 14px;
+		margin: 20px;
+		font-family: verdana;
+		font-weight: bold;
+		color: darkred;
+		font-size: 50px;
+		text-align: center;
+		margin-bottom: 0px;
+	}
+</style>
+<link rel="stylesheet" type="text/css" href="new.css">
+<body>
+	<div class="head">
+		<p><center>COFFEE HOUSE</center></p>
+	</div>
+	<br>
+	<button type="button" onclick="onFunc();" style="float: center;" class="btn btn-outline-success" id="show">SHOW MENU</button><br>
+	<img id="menu" src="1.png" style="width:250px;display: none;margin-top: 65px;">
+	<div class="con">
+		<div class="coffee" style="margin-top: 50px;">
+			<span style="display: flex;align-items: center;justify-content: center;">
+				<p style="width: 300px;">Flat White Coffee</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="exp_m">
+				</div>
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Americano Coffee</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="exp_c">
+				</div>
+			</span>
+			<span style="display: flex; align-items: center; justify-content: center;">
+				<p style="width: 300px;">Macchiato Coffee</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="exp_l">
+				</div>
+			</span>
+			<span style="display: flex; align-items: center; justify-content: center;">
+				<p style="width: 300px;">Expresso Coffee</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="cap_m">
+				</div>
+			</span>
+			<span style="display: flex; align-items: center; justify-content: center;">
+				<p style="width: 300px;">Cappaccino Coffee</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="cap_c">
+				</div>
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Conpanna Coffee</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="cap_l">
+				</div>
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Coffee Mocha</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="lat_m">
+				</div>
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Caramel Macchiato Coffee</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="lat_c">
+				</div>
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Cafe Breve</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="lat_l">
+				</div>
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Latte Coffee</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="lat_cl">
+				</div> 
+			</span>
+		</div>
+		<input type="button" class="btn btn-success" name="submit" value="PLACE THE ORDER" onclick="action();" style="padding: 10px;font-size: 15px;cursor: pointer;width: 250px;margin-bottom: 50px;margin-top: 50px;">
+		<br>
+		<div id="display" style="height: 100px; width: 300px;margin:auto;display: none;">
+			<p style="display: none;width :250px;height: 60px;border: 1px solid black;padding: 10px 5px; background-color: lightcyan; font-size: 25px;text-align: center;color: black;border-radius: 8px;margin-left: 25px;" id="bill"></p>
+		</div>
+</div>
+<script type="text/javascript">
+	function onFunc(){
+
+		if(document.getElementById('menu').style.display === "none"){
+			document.getElementById("menu").style.display = "inline-block";
+			document.getElementById("show").innerHTML = "HIDE MENU";
+		}
+		else{
+			document.getElementById("menu").style.display = "none";
+			document.getElementById("show").innerHTML = "SHOW MENU";
+		}
+	}
+
+//FOR BILL CALCULATION
+	class Coffee{
+		constructor(exp_m,exp_c,exp_l,cap_m,cap_c,cap_l,lat_m,lat_c,lat_l,lat_cl){
+	   }
+	   display(){
+	   		return [this.exp_m , this.exp_c, this.exp_l, this.cap_m, this.cap_c, this.cap_l,this.lat_m, this.lat_c, this.lat_l,this.lat_cl];
+	   }
+	}
+		
+	class Data extends Coffee{
+		constructor(){
+			super(exp_m,exp_c,exp_l,cap_m,cap_c,cap_l,lat_m,lat_c,lat_l,lat_cl);
+			this.exp_m = exp_m;
+			this.exp_c = exp_c;
+			this.exp_l = exp_l;
+			this.cap_m = cap_m;
+			this.cap_c = cap_c;
+			this.cap_l = cap_l;
+			this.lat_m = lat_m;
+			this.lat_c = lat_c;
+			this.lat_l = lat_l;
+			this.lat_cl = lat_cl;
+		}
+		action1(){
+			this.display();
+			if(exp_m.value==0 && exp_l.value==0 && exp_c.value==0 && cap_c.value==0 && cap_l.value==0 && cap_m.value==0 && lat_c.value==0 && lat_l.value==0 && lat_m.value==0 && lat_cl.value==0){
+				var bill = "Please Order A Coffee";
+				return bill;
+			}
+			else{
+      	var bill = 0;
+      	bill = exp_m.value  * 320 + exp_c.value * 110 + exp_l.value * 125 + cap_m.value * 150 + cap_c.value * 190 + cap_l.value * 120 + lat_m.value * 200 + lat_c.value * 180 + lat_l.value * 180 + lat_cl.value * 160;
+      	return "Total bill is Rs."+bill;
+    	}
+		}
+	}	
+
+	class Display{
+		constructor(bill){
+			this.bill = bill;
+		}
+		display1(){
+				document.getElementById("bill").innerHTML = this.bill;
+				document.getElementById("bill").style.display = "inline";
+				document.getElementById("display").style.display = "inline-block";
+				document.getElementById("bill").style.color = "#3333ff";
+				document.getElementById("display").style.height = "70px";
+				document.getElementById("display").style.width = "500px";
+				document.getElementById("display").style.margin = "auto";
+				document.getElementById("bill").style.margin = "auto";
+				document.getElementById("bill").style.fontSize = "25px";
+				document.getElementById('bill').style.padding = "20px";
+		}
+	}
+	
+	function action(){
+				const exp_m = document.getElementById("exp_m").value;
+				const exp_c = document.getElementById("exp_c").value;
+				const exp_l = document.getElementById("exp_l").value;
+
+				const cap_m = document.getElementById("cap_m").value;
+				const cap_c = document.getElementById("cap_c").value;
+				const cap_l = document.getElementById("cap_l").value;
+
+				const lat_m = document.getElementById("lat_m").value;
+				const lat_c = document.getElementById("lat_c").value;
+				const lat_l = document.getElementById("lat_l").value;
+				const lat_cl = document.getElementById("lat_cl").value;
+
+			let cof = new Coffee(exp_m,exp_c,exp_l,cap_m,cap_c,cap_l,lat_m,lat_c,lat_l,lat_cl);
+			let obj = new Data();
+			cof.display();
+			var bill1 = obj.action1();
+
+			var ob = new Display(bill1);
+			ob.display1();
+	}
+</script>
+</body>
+</html>

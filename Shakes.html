@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+	<title>Shakes Parlour</title>
+	<link rel="icon" type="image/png" href="shakeIcon.jpg">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	</head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
+    jQuery('.quantity').each(function() {
+      var spinner = jQuery(this),
+        input = spinner.find('input[type="number"]'),
+        btnUp = spinner.find('.quantity-up'),
+        btnDown = spinner.find('.quantity-down'),
+        min = input.attr('min'),
+        max = input.attr('max');
+
+      btnUp.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue >= max) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue + 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+      btnDown.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue <= min) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue - 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+    });
+});
+		    
+	</script>
+<style type="text/css">
+
+	body{
+		box-sizing: border-box;
+		text-align: center;
+	  background-image: url('shakebg.jpg');
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-position: fixed;
+	}
+	.container{
+		height: 20px;
+	}
+	.child{
+		display: inline-block;
+		border: transparent;
+		padding: 1rem 1rem;
+		vertical-align: middle;
+		margin-top: 0px;
+	}
+	#case{
+		border: 2px solid black;
+		margin: 10px 10px;
+		padding: 10px;
+	}
+	label{
+		margin: 5px 10px;
+		padding: 3px;
+		font-weight: bold;
+	}
+	input{
+		margin: 5px 10px;
+		padding: 5px;
+	}
+	p{
+		margin-right: 150px;
+		font-family: sans-serif;
+		font-weight: bold;
+		font-size: 20px;
+		margin-top: 5px;
+		margin-bottom: 0px;
+		text-align: left;
+	}
+	iframe{
+		position:absolute;
+		z-index:1;
+		top:0px;
+		left:0px;
+		border: 0 !important;
+	}
+	#box{
+		margin: 10px;
+	}
+	img{
+		display: inline;
+	}
+	.image1{
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-position: left;
+	}
+	.head{
+		display: inline-block;
+		padding: 14px;
+		margin: 20px;
+		font-family: verdana;
+		font-weight: bold;
+		color: darkred;
+		font-size: 50px;
+		text-align: center;
+		margin-bottom: 0px;
+	}
+</style>
+<link rel="stylesheet" type="text/css" href="new.css">
+<body>
+	<div class="head">
+		<p><center>SHAKES PARLOUR</center></p>
+	</div>
+	<br>
+	<button type="button" onclick="onFunc();" style="float:center;" class="btn btn-outline-success" id="show">SHOW MENU</button><br>
+	<img id="menu" src="Shakes Parlour.png" style="width:250px;display: none;margin-top: 65px;">
+	<div class="con">
+		<div class="coffee" style="margin-top: 50px;">
+			<span style="display: flex;align-items: center;justify-content: center;">
+				<p style="width: 300px;">Vanilla Special Shake</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="i1">
+				</div>
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Strawberry Marshallow Shake</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="i2">
+				</div>
+			</span>
+			<span style="display: flex; align-items: center; justify-content: center;">
+				<p style="width: 300px;">Raspberry Chocolate Shake</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="i3">
+				</div>
+			</span>
+			<span style="display: flex; align-items: center; justify-content: center;">
+				<p style="width: 300px;">Dry Fruit MilkShake</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="i4">
+				</div>
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Triple Nut Caramel Shake</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="i5">
+				</div>
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Nutella MilkShake</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="i6">
+				</div>
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Apple Pie Shake</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="i7">
+				</div>
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Blueberry Cheese Shake</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="i8">
+				</div>
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Badam Milk Shake</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="i9">
+				</div> 
+			</span>
+			<span style="display: flex;align-items: center; justify-content: center;">
+				<p style="width: 300px;">Oreo Milk Shake</p>
+				<div class="quantity" id="box">
+  						<input type="number" min="0" step="1" value="0" id="i10">
+				</div> 
+			</span>
+		</div>
+		<input type="button" class="btn btn-success" name="submit" value="PLACE THE ORDER" onclick="action();" style="padding: 10px;font-size: 15px;cursor: pointer;width: 250px;margin-bottom: 50px;margin-top: 50px;">
+		<br>
+		<div id="display" style="height: 100px; width: 300px;margin:auto;display: none;">
+			<p style="display: none;width :250px;height: 60px;border: 1px solid black;padding: 10px 5px; background-color: lightcyan; font-size: 25px;text-align: center;color: black;border-radius: 8px;margin-left: 25px;" id="bill"></p>
+		</div>
+</div>
+<script type="text/javascript">
+	function onFunc(){
+
+		if(document.getElementById('menu').style.display === "none"){
+			document.getElementById("menu").style.display = "inline-block";
+			document.getElementById("show").innerHTML = "HIDE MENU";
+		}
+		else{
+			document.getElementById("menu").style.display = "none";
+			document.getElementById("show").innerHTML = "SHOW MENU";
+		}
+	}
+
+//FOR BILL CALCULATION
+	class Item{
+		constructor(i1,i2,i3,i4,i5,i6,i7,i8,i9,i10){
+	   }
+	   display(){
+	   		return [this.i1 , this.i2, this.i3, this.i4, this.i5, this.i6,this.i7, this.i8, this.i9, this.i10];
+	   }
+	}
+		
+	class Data extends Item{
+		constructor(){
+			super(i1,i2,i3,i4,i5,i6,i7,i8,i9,i10);
+			this.i1 = i1;
+			this.i2 = i2;
+			this.i3 = i3;
+			this.i4 = i4;
+			this.i5 = i5;
+			this.i6 = i6;
+			this.i7 = i7;
+			this.i8 = i8;
+			this.i9 = i9;
+			this.i10 = i10;
+		}
+		action1(){
+			this.display();
+			if(i1.value==0 && i2.value==0 && i3.value==0 && i4.value==0 && i5.value==0 && i6.value==0 && i7.value==0 && i8.value==0 && i9.value==0 && i10.value==0){
+				var bill = "Please Order A Shake";
+				return bill;
+			}
+			else{
+      	var bill = 0;
+      	bill = i1.value * 105 + i2.value * 160 + i3.value * 95 + i4.value * 100 + i5.value * 130 + i6.value * 140 + i7.value * 115 + i8.value * 80 + i9.value * 110 + i10.value * 70;
+      	return "Total bill is Rs."+bill;
+    	}
+		}
+	}	
+
+	class Display{
+		constructor(bill){
+			this.bill = bill;
+		}
+		display1(){
+				document.getElementById("bill").innerHTML = this.bill;
+				document.getElementById("bill").style.display = "inline";
+				document.getElementById("display").style.display = "inline-block";
+				document.getElementById("bill").style.color = "#3333ff";
+				document.getElementById("display").style.height = "70px";
+				document.getElementById("display").style.width = "500px";
+				// document.getElementById("display").style.backgroundColor = "black";
+				document.getElementById("display").style.margin = "auto";
+				document.getElementById("bill").style.margin = "auto";
+				document.getElementById("bill").style.fontSize = "25px";
+				document.getElementById('bill').style.padding = "20px";
+		}
+	}
+	
+	function action(){
+		const i1 = document.getElementById("i1").value;
+		const i2 = document.getElementById("i2").value;
+		const i3 = document.getElementById("i3").value;
+		const i4 = document.getElementById("i4").value;
+		const i5 = document.getElementById("i5").value;
+		const i6 = document.getElementById("i6").value;
+		const i7 = document.getElementById("i7").value;
+		const i8 = document.getElementById("i8").value;
+		const i9 = document.getElementById("i9").value;
+		const i10 = document.getElementById("i10").value;
+
+			let item = new Item(i1,i2,i3,i4,i5,i6,i7,i8,i9,i10);
+			let obj = new Data();
+			item.display();
+			var bill1 = obj.action1();
+
+			var ob = new Display(bill1);
+			ob.display1();
+	}
+</script>
+</body>
+</html>
